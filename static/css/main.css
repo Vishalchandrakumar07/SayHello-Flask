@@ -1,6 +1,9 @@
 body {
   background-color: red;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 p {
@@ -11,19 +14,22 @@ p {
 }
 
 img {
-  margin: 60px 0 30px 0;
-  width: 250px;
+  margin: 40px 0 20px 0;
+  width: 80%;
+  max-width: 250px;
+  height: auto;
 }
 
 input {
-  width: 300px;
+  width: 80%;
+  max-width: 300px;
   height: 50px;
-  margin: 20px;
+  margin: 10px;
   border: none;
   border-radius: 10px;
   font-family: Shanti;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 input:focus {
@@ -34,10 +40,39 @@ input:focus {
 #greet {
   background-color: palevioletred;
   color: white;
-  width: 200px;
+  width: 80%;
+  max-width: 200px;
+  height: 50px;
+  margin: 10px;
 }
 
 #greet:hover {
   background-color: mediumvioletred;
   cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets and larger screens */
+@media (min-width: 600px) {
+  input,
+  #greet {
+    width: 60%;
+    max-width: 300px;
+  }
+}
+
+/* For desktops and larger screens */
+@media (min-width: 1024px) {
+  img {
+    width: 250px;
+  }
+
+  input {
+    width: 300px;
+  }
+
+  #greet {
+    width: 200px;
+  }
 }
